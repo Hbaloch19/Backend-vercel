@@ -1,7 +1,12 @@
-// server.js
-const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
+import dotenv from 'dotenv';
+dotenv.config();
+
+import express from 'express';
+import mongoose from 'mongoose';
+import cors from 'cors';
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const app = express();
 app.use(cors());
@@ -60,4 +65,4 @@ app.delete('/items/:id', async (req, res) => {
 
 // **DO NOT start listening here!**
 // export the app for Vercel to use as a serverless function:
-module.exports = app;
+export default app;
